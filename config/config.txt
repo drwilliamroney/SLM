@@ -1,0 +1,9 @@
+UBUNTU_VERSION=ubuntu:24.04
+SLURM_VERSION=25.11.0
+SLURM_MD5=b80465f2dd9f763f26fd8f7906b52aa9
+SLURM_NODES=2
+SLURM_NODE_MEM=4096
+#PRELOADED_MODEL=mistralai/Mistral-7B-Instruct-v0.3
+PRELOADED_MODEL=Qwen/Qwen3-0.6B
+VLLM_IMAGE=public.ecr.aws/q9t5s3a7/vllm-cpu-release-repo
+VLLM_RUNARGS=-e VLLM_CPU_KVCACHE_SPACE=40 -e VLLM_CPU_NUM_OF_RESERVED_CPU=1 --privileged --security-opt seccomp=unconfined --cap-add SYS_NICE --shm-size=4g
